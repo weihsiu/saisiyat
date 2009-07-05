@@ -38,8 +38,8 @@ abstract class AndroidProject(info: ProjectInfo) extends DefaultProject(info) {
   def packageApkName = name + ".apk"
   def resourcesApkName = DefaultResourcesApkName
 
+  def androidSdkPath: Path
   def scalaHomePath = Path.fromFile(new File(System.getProperty("scala.home")))
-  def androidSdkPath = Path.fromFile(new File("/Users/walter/Personal/lib/java/google/android/android-sdk-mac_x86-1.5_r1"))
   def androidToolsPath = androidSdkPath / "tools"
   def apkbuilderPath = androidToolsPath / DefaultApkbuilderName
   def adbPath = androidToolsPath / adbName
